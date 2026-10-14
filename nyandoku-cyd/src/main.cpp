@@ -288,7 +288,9 @@ void setup() {
   Serial.begin(115200);
   randomSeed(esp_random());
   pinMode(TFT_BL, OUTPUT); digitalWrite(TFT_BL, HIGH);
-  tft.init(); tft.setRotation(1);
+  tft.init();
+  tft.invertDisplay(true);       // 　色が逆転していたら、 trueまたは false に切り替え
+  tft.setRotation(1);
   SPI.begin(XPT_CLK, XPT_MISO, XPT_MOSI, XPT_CS);  // 表示はHSPI、タッチはVSPI(標準のSPI)を使用
   ts.begin(); ts.setRotation(1);
   prefs.begin("nyan", false); loadCal();
