@@ -9,7 +9,7 @@
 
 😻
 
-## 色が反転している時
+## CYDの機種によって色が反転している場合
 292行目の
 ```cpp
  tft.invertDisplay(true);       // 　色が逆転していたら、 trueまたは false に切り替え
